@@ -32,6 +32,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    '@nuxtjs/dotenv'
   ],
   router: {
     middleware: ['auth']
@@ -47,9 +48,9 @@ export default {
       '@nuxtjs/firebase',
       {
         config: {
-          apiKey: 'AIzaSyDaKAPyPx99Lyve05v-ro0pYTcHPcswdlE',
+          apiKey: process.env.fb_api_key,
           authDomain: 'localhost',
-          projectId: 'psyched-age-322817',
+          projectId: process.env.fb_project_id,
           storageBucket: '<storageBucket>',
           messagingSenderId: '<messagingSenderId>',
           appId: '<appId>',
