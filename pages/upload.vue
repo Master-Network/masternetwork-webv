@@ -66,6 +66,7 @@
 					}
 				).then(function(){
 					console.log('SUCCESS!!');
+					window.location.reload(true)
 				})
 				.catch(function(){
 					console.log('FAILURE!!');
