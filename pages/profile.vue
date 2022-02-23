@@ -78,6 +78,9 @@ export default {
         mountains: [],
       }
     },
+    mounted() {
+    console.log(process.env.TEST_VARIABLE)
+},
     async fetch() {
       this.udata = await fetch(
         'https://api.masternetwork.dev/login/'+this.$fire.auth.currentUser.uid
