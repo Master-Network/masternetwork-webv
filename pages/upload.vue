@@ -12,6 +12,7 @@
 			<br>
 			   <label>Repeat</label>
           <input
+
             type="number"
             v-model="ntime"
             class="form-control"
@@ -73,4 +74,8 @@
 		}
 	}
 </script>
-	
+<style>
+.form-control {
+	color: white
+}
+</style>
