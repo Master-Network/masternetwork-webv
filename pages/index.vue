@@ -42,7 +42,7 @@ You will have to define a price of execution per second (ex: 0.0000058 xmr per s
 You will pay only if your script work properly. <br>
 You can see what dependencies you can use <a href="https://github.com/Parmicciano/Client-masternetwork/blob/master/client-repo-docker/requirements.txt">here</a>
 <br><br>
-Please make a request on discord in order to add some modules. 
+Please make a request on <a href="https://discord.gg/NVvvkXMbAB">discord</a> in order to add some modules. 
            </v-card-text>
 
  <v-card-text>
