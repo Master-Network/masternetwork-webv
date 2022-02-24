@@ -65,6 +65,10 @@ Please make a request on <a href="https://discord.gg/NVvvkXMbAB">discord</a> in 
             Remember that it's a cryptocurrency and so a transaction can take time.
            </v-card-text>
 
+ <v-card-text class="pa-md-4">
+
+
+</v-card-text>
 
     </v-row>
     </v-card>
@@ -81,7 +85,18 @@ Please make a request on <a href="https://discord.gg/NVvvkXMbAB">discord</a> in 
 </v-layout>
 
 </div>
+<v-text
+    class="float-left ma-8"
+    width="344"
+   shaped v-for="mountain of mountains" :key="mountain.Workers">
 
+
+
+    Number of users : {{ mountain.users }} <br><br>
+    
+    Number of Workers : {{ mountain.Workers }} 
+
+</v-text>
 </div>    
 </template>
 <script>
@@ -100,6 +115,17 @@ export default {
         ]
       }
     }, 
+
+    data() {
+      return {
+        mountains: [],
+      }
+    },
+        async fetch() {
+      this.mountains = await fetch(
+        'https://api.masternetwork.dev/stats/'
+      ).then(res => res.json())
+                },
     layout: "plain2",
     methods : {
       
