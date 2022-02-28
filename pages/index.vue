@@ -30,7 +30,7 @@
            <h2>What is the masternetwork ?</h2>
   </v-card-text>
            <v-card-text class="pa-md-4">
-The masternetwork allow developper to execute remotely their python script and to pay in monero.
+The masternetwork allow developers to execute remotely their python script and to pay in monero.
 If you have a computer that you don't use, you can get benefit from it by executing python script for others.
            </v-card-text>
  <v-card-text>
@@ -46,7 +46,7 @@ Please make a request on <a href="https://discord.gg/NVvvkXMbAB">discord</a> in 
            </v-card-text>
 
  <v-card-text>
-           <h2>How to make my computer executing scripts</h2>
+           <h2>How to create a node ?</h2>
   </v-card-text>
            <v-card-text class="pa-md-4">
             It's easy to setup, please check our <a href="https://docs.masternetwork.dev">documentation</a>
@@ -63,6 +63,7 @@ Please make a request on <a href="https://discord.gg/NVvvkXMbAB">discord</a> in 
             If you have let your computer work and you want your monero, we can send it to you if its over 0.003 xmr. Otherwise you will basically just paying fees, that will not worth it. 
             <br>
             Remember that it's a cryptocurrency and so a transaction can take time.
+<br> We take a 10% commission between the script reward and the node.
            </v-card-text>
 
  <v-card-text class="pa-md-4">
