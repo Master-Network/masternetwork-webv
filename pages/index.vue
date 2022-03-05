@@ -93,9 +93,9 @@ Please make a request on <a href="https://discord.gg/NVvvkXMbAB">discord</a> in 
 
 
 
-    Number of users : {{ mountain.users }} <br><br>
+    Number of current users : {{ mountain.users }} <br><br>
     
-    Number of Workers : {{ mountain.Workers }} 
+    Number of current Workers : {{ mountain.Workers }} 
 
 </v-text>
 </div>    
