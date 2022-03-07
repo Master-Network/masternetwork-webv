@@ -3,7 +3,7 @@
 <v-container fluid>
   <v-layout justify-center align-center>
     <v-flex shrink>
-            <img src="logo-dark.png">
+            <img src="logo-dark.png" width="100%">
     </v-flex>
   </v-layout>
 </v-container>
