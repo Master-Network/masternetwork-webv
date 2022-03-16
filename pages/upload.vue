@@ -7,10 +7,17 @@
 		
 
 			<v-btn color="success" @click="$refs.inputUpload.click()">Uplad your script</v-btn>
-			<input v-show="false" ref="inputUpload" type="file" @change="handleFileUpload( $event )" >
-			<br>
-			<br>
-			   <label>Repeat</label>
+			<input v-show="false" ref="inputUpload" type="file" webkitdirectory mozdirectory @change="handleFileUpload( $event )">
+	<br><br><br>
+			   <label>Name of the script</label>
+			<input
+
+            type="string"
+            v-model="name"
+            class="form-control"
+            placeholder="my script"
+          ><br><br><br>
+		  <label>Repeat</label>
           <input
 
             type="number"
@@ -18,6 +25,7 @@
             class="form-control"
             placeholder="280"
           >
+		  
         
 			<br>
 				<br>
@@ -29,7 +37,7 @@
             class="form-control"
             placeholder="0.00001" 
           > 
-		  Be careful ! 1 monero = 150 $ approximately !
+		  Be careful ! 1 monero = 180 $ approximately !
         
 			<br>
 			<button v-on:click="submitFile()"><u>Submit</u></button>
@@ -43,7 +51,8 @@
 	export default {
 		data(){
 			return {
-				file: '',
+				files: '',
+				name : '',
 				ntime: '',
 				reward: ''
 			}
@@ -51,13 +60,26 @@
 		
 		methods: {
 			handleFileUpload( event ){
-				this.file = event.target.files[0];
+				this.files = event.target.files
 			},
 			
 			submitFile(){
 				let formData = new FormData();
-				formData.append('files', this.file);
-				axios.post( 'https://api.masternetwork.dev/upload/python?uid='+this.$fire.auth.W+'&ntime='+this.ntime+'&reward='+this.reward,
+				
+				for( var i = 0; i < this.files.length; i++ ){
+					let file = this.files[i];
+				
+					formData.append('files', file);
+					console.log('files=', file)
+				}
+				console.log( 'https://api.masternetwork.dev/upload/files/?uid='+this.$fire.auth.W+'&name='+this.name+'&timetodo='+this.ntime+'&reward='+this.reward,
+					formData,
+					{
+						headers: {
+								'Content-Type': 'multipart/form-data'
+						}
+					})
+				axios.post( 'https://api.masternetwork.dev/upload/files/?uid='+this.$fire.auth.W+'&name='+this.name+'&timetodo='+this.ntime+'&reward='+this.reward,
 					formData,
 					{
 						headers: {

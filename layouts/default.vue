@@ -110,6 +110,11 @@ export default {
           icon: 'mdi-currency-usd',
           title: 'Monero',
           to: '/monero'
+        },
+         {
+          icon: 'mdi-account-multiple-check',
+          title: 'Sponsor',
+          to: '/sponsor'
         }
       ],
       miniVariant: false,

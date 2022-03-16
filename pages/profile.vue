@@ -19,7 +19,7 @@
 <v-card
     class="float-left ma-8"
     width="344"
-   shaped v-for="mountain of mountains" :key="mountain.path">
+   shaped v-for="mountain of mountains" :key="mountain.folderid">
     <v-card-text>
 
 
@@ -40,7 +40,7 @@
       <v-btn
         text
         color="blue darken-2 accent-4"
-        @click="deleted(mountain.path)"
+        @click="deleted(mountain.folderid)"
       >delete
       </v-btn>
     </v-card-actions>
@@ -61,9 +61,9 @@ export default {
   },
   methods: {
     
-    async deleted(newname) {
-      console.log(newname)
-    	axios.get( 'https://api.masternetwork.dev/delete/'+newname)
+    async deleted(folderid) {
+      console.log(folderid)
+    	axios.get( 'https://api.masternetwork.dev/delete/'+folderid)
       this.$router.replace("/upload");
     },
     async logout() {
