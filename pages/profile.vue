@@ -44,6 +44,7 @@
       >delete
       </v-btn>
     </v-card-actions>
+    response : {{ deleteResponse }}
   </v-card>
   
 </div>
@@ -63,8 +64,9 @@ export default {
     
     async deleted(folderid) {
       console.log(folderid)
-    	axios.get( 'https://api.masternetwork.dev/delete/'+folderid)
-      this.$router.replace("/upload");
+    	let deleteResponse  = await axios.get( 'https://api.masternetwork.dev/delete/'+folderid)
+      this.deleteResponse = deleteResponse["data"]["response"]
+      console.log(deleteResponse)
     },
     async logout() {
       await this.$fire.auth.signOut();
@@ -76,6 +78,7 @@ export default {
     data() {
       return {
         mountains: [],
+        deleteResponse: ""
       }
     },
     mounted() {
