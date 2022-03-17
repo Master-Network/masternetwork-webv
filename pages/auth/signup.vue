@@ -92,6 +92,7 @@ export default {
               });
 
             const currentUser = this.$fire.auth.currentUser;
+            console.log(this.$route.query.sponsor)
             currentUser
               .updateProfile({
                 displayName: this.name,
@@ -114,6 +115,9 @@ export default {
                 authUser,
               })
               .then(() => {
+                const axios = require('axios');
+                axios.get('https://api.masternetwork.dev/login/'+authUser.uid)
+                axios.get("https://api.masternetwork.dev/sponsorship/"+this.$fire.auth.currentUser.uid+"/{apikeysponsor}?api_key_sponsor="+this.$route.query.sponsor)
                 this.$router.replace("/login");
               })
               .catch((error) => {

@@ -102,6 +102,7 @@ Please make a request on <a href="https://discord.gg/NVvvkXMbAB">discord</a> in 
 </template>
 <script>
 export default {
+  
 
     head() {
       return {
@@ -122,13 +123,17 @@ export default {
         mountains: [],
       }
     },
-        async fetch() {
+        mounted() {
+        console.log(this.$route.query.sponsor);
+      },
+      async fetch() {
       this.mountains = await fetch(
         'https://api.masternetwork.dev/stats/'
       ).then(res => res.json())
                 },
     layout: "plain2",
     methods : {
+      
       
        REGISTER() {
       this.$router.push("/auth/signup");
