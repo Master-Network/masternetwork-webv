@@ -40,7 +40,7 @@
       <v-btn
         text
         color="blue darken-2 accent-4"
-        @click="deleted(mountain.folderid)"
+        @click="deleted(mountain.time_to_do)"
       >delete
       </v-btn>
     </v-card-actions>
@@ -62,9 +62,9 @@ export default {
   },
   methods: {
     
-    async deleted(folderid) {
-      console.log(folderid)
-    	let deleteResponse  = await axios.get( 'https://api.masternetwork.dev/delete/'+folderid)
+    async deleted(timetodo) {
+      console.log(timetodo)
+    	let deleteResponse  = await axios.get( 'https://api.masternetwork.dev/delete/'+this.$fire.auth.currentUser.uid+"/"+timetodo)
       this.deleteResponse = deleteResponse["data"]["response"]
       console.log(deleteResponse)
     },
