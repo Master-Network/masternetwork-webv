@@ -102,12 +102,12 @@ export default {
           to: '/'
         },
          {
-          icon: 'mdi-folder',
-          title: 'Upload',
-          to: '/upload'
+          icon: 'mdi-server',
+          title: 'Virtual Machines (beta)',
+          to: '/vms'
         }, 
         {
-          icon: 'mdi-currency-usd',
+          icon: 'mdi-bitcoin',
           title: 'Monero',
           to: '/monero'
         },

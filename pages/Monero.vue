@@ -134,6 +134,8 @@ export default {
       this.mountains = await fetch(
         'https://api.masternetwork.dev/show/files/'+this.$fire.auth.currentUser.uid
       ).then(res => res.json())
+
+      console.log(this.mountains)
       
     }
 

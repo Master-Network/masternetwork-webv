@@ -16,36 +16,6 @@
       </v-card>
     </v-col>
   </v-row>
-<v-card
-    class="float-left ma-8"
-    width="344"
-   shaped v-for="mountain of mountains" :key="mountain.folderid">
-    <v-card-text>
-
-
-      <p class="text-h4 text--primary">
-       {{ mountain.oldname }} 
-      </p>
-      xmr_per_sec :{{ mountain.xmr_per_sec }} 
-      <div class="text--primary">
-    time to do : {{ mountain.time_to_do }}
-    <br>
-    times done : {{ mountain.time_done }} 
-    <br>
-    times left : {{ mountain.time_to_do - mountain.time_done }}
-      </div>
-
-    </v-card-text>
-    <v-card-actions>
-      <v-btn
-        text
-        color="blue darken-2 accent-4"
-        @click="deleted(mountain.time_to_do)"
-      >delete
-      </v-btn>
-    </v-card-actions>
-    response : {{ deleteResponse }}
-  </v-card>
   
 </div>
 
@@ -61,13 +31,6 @@ export default {
    
   },
   methods: {
-    
-    async deleted(timetodo) {
-      console.log(timetodo)
-    	let deleteResponse  = await axios.get( 'https://api.masternetwork.dev/delete/'+this.$fire.auth.currentUser.uid+"/"+timetodo)
-      this.deleteResponse = deleteResponse["data"]["response"]
-      console.log(deleteResponse)
-    },
     async logout() {
       await this.$fire.auth.signOut();
       this.$router.replace("/");
@@ -77,8 +40,7 @@ export default {
   
     data() {
       return {
-        mountains: [],
-        deleteResponse: ""
+        mountains: []
       }
     },
     mounted() {
@@ -91,10 +53,7 @@ export default {
       console.log(this.udata)
 
 
-      this.mountains = await fetch(
-        'https://api.masternetwork.dev/show/files/'+this.$fire.auth.currentUser.uid
-      ).then(res => res.json())
-      
+  
     }
 
 };
