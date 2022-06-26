@@ -261,6 +261,7 @@ export default {
       ) {
         const axios = require("axios");
         axios.get("https://api.masternetwork.dev/deletevm/" + key);
+        this.$nuxt.refresh()
       }
     },
       deleteport(doc) {
