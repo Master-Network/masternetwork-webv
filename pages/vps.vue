@@ -14,7 +14,15 @@
       </v-app-bar>
 
       <!-- Sizes your content based upon application components -->
-      <v-main>
+      <v-main class="ma-2">
+        <span>
+          Here are the different instances currently available. The "C"
+          instances are intended to be used for computing, database
+          administration, hosting websites and running scripts. Please tell us
+          on <a href="https://discord.gg/NVvvkXMbAB">discord</a> the new
+          instances you would like to see.
+        </span>
+        <br /><br />
         <div>
           <v-data-table
             :headers="headers"
@@ -32,20 +40,31 @@
               ></v-text-field>
             </template>
 
-              <tr>
-                <td></td>
-                <td>
-                  <v-text-field
-                    v-model="calories"
-                    type="number"
-                    label="Less than"
-                  ></v-text-field>
-                </td>
-                <td colspan="4"></td>
-              </tr>
-          
+            <tr>
+              <td></td>
+              <td>
+           
+              </td>
+              <td colspan="4"></td>
+            </tr>
           </v-data-table>
         </div>
+        <br><br>
+        <span>
+          Unfortunately, these instances don't work exactly like the ones you
+          could use at aws or google cloud. Indeed, the instances are hosted on
+          servers belonging to individuals (homelab). This allows to provide
+          lower prices and to exploit computing power usually not used. However,
+          the instances are protected behind a firewall, so if you want to
+          exploit a port such as 80 to expose a website, you will have to go on
+          your interface and declare a domain name. By using CNAME in the dns
+          records, you will be able to send your traffic directly to your
+          instance.<br><br>
+          It works the same way for other ports, like port 3306 for example (mysql). 
+          You will just have to specify the port to your database connection tool (remote port).
+          <br><br>
+          For more details about ordering a virtual private server, you can read our <a href="https://docs.masternetwork.dev/create-a-vm">documentation</a>
+        </span>
       </v-main>
     </v-app>
 
@@ -88,21 +107,21 @@ export default {
   data() {
     return {
       mountains: [],
-       search: '',
-  
-        instances: [
-          {
-            name: 'C1',
-            vcpus: 1,
-            ram: 2048,
-            storage: 10,
-            os: "ubuntu 22.04",
-            price: '0.005',
-          },
-        ],
-      }
-    },
-  
+      search: "",
+
+      instances: [
+        {
+          name: "C1",
+          vcpus: 1,
+          ram: 2048,
+          storage: 10,
+          os: "ubuntu 22.04",
+          price: "0.005",
+        },
+      ],
+    };
+  },
+
   mounted() {
     console.log(this.$route.query.sponsor);
   },
@@ -121,7 +140,6 @@ export default {
           sortable: true,
           value: "name",
         },
-        
 
         { text: "vcpus", value: "vcpus" },
         { text: "ram (mb)", value: "ram" },

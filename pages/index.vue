@@ -61,7 +61,7 @@
                 </v-list-item>
 
                 <v-card-actions>
-                  <v-btn outlined rounded text> Start </v-btn>
+                  <v-btn outlined rounded text @click="NODE"> Start </v-btn>
                 </v-card-actions>
               </v-card>
             </v-flex>
@@ -207,6 +207,9 @@ export default {
     },
     INSTANCE() {
       this.$router.push("/vps");
+    },
+     NODE() {
+      this.$router.push("/node");
     }
   },
 };
