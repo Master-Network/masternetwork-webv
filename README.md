@@ -1,4 +1,4 @@
-# website
+# masternetwork.dev
  
 This is the website masternetwork.dev <br>
 Developped with nuxtjs & vuetify<br>
