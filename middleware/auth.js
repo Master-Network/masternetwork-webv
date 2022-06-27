@@ -8,7 +8,7 @@ export default function ({ store, app, route, redirect }) {
         }
     }
 
-    if (route.path !== '/auth/signin' && route.path !== '/auth/signup' && route.path !== '/auth/resetpassword' && route.path !== '/' && route.path !== ''  && route.path !== '/login') {
+    if (route.path !== '/auth/signin' && route.path !== '/auth/signup' && route.path !== '/auth/resetpassword' && route.path !== '/' && route.path !== ''  && route.path !== '/login' && route.path !== '/vps') {
         if (!user) {
             return redirect('/auth/session')
         }

@@ -26,7 +26,8 @@
                       Virtual private servers
                     </v-list-item-title>
                     <v-list-item-subtitle
-                      >Create a VPS in minutes. <br />Starting @ 0.005$ per hour
+                      >Create a VPS in minutes. <br />Starting @ 0.005$ per
+                      hour.
                     </v-list-item-subtitle>
                   </v-list-item-content>
 
@@ -36,12 +37,12 @@
                 </v-list-item>
 
                 <v-card-actions>
-                  <v-btn outlined rounded text>Instances</v-btn>
+                  <v-btn outlined rounded @click="INSTANCE">Instance</v-btn>
                 </v-card-actions>
               </v-card>
             </v-flex>
             <v-flex>
-              <v-card class="mx-auto" max-width="500" min-width="350" >
+              <v-card class="mx-auto" max-width="500" min-width="350">
                 <v-list-item three-line>
                   <v-list-item-content>
                     <div class="text-overline mb-4">Node</div>
@@ -49,19 +50,18 @@
                       Become a Node
                     </v-list-item-title>
                     <v-list-item-subtitle
-                      >Earn cryptocurrency by lending your server</v-list-item-subtitle
+                      >Earn cryptocurrency by lending your server for
+                      developpers.</v-list-item-subtitle
                     >
                   </v-list-item-content>
 
-                  <v-list-item-avatar
-                    tile
-                    size="80"
-                    color="grey"
-                  ></v-list-item-avatar>
+                  <v-list-item-avatar tile size="80" color="grey">
+                    <img src="/nodebtc.jpg" alt="Datacenter @ VPS"
+                  /></v-list-item-avatar>
                 </v-list-item>
 
                 <v-card-actions>
-                  <v-btn outlined rounded text> Button </v-btn>
+                  <v-btn outlined rounded text> Start </v-btn>
                 </v-card-actions>
               </v-card>
             </v-flex>
@@ -205,6 +205,9 @@ export default {
     LOGIN() {
       this.$router.push("/login");
     },
+    INSTANCE() {
+      this.$router.push("/vps");
+    }
   },
 };
 </script>
