@@ -15,16 +15,59 @@
 
       <!-- Sizes your content based upon application components -->
       <v-main>
-        <div
-          style="display: flex; justify-content: center; align-items: center"
-        >
-          <img
-            src="https://tenor.com/view/plane-scramblers-jet-gif-7589234.gif"
-            width="100%"
-            style="max-width: 800px"
-          />
-        </div>
-        <!-- Provides the application the proper gutter -->
+        <v-container grid-list-md text-xs-center>
+          <v-layout row wrap>
+            <v-flex>
+              <v-card class="mx-auto" max-width="500" min-width="350">
+                <v-list-item three-line>
+                  <v-list-item-content>
+                    <div class="text-overline mb-4">VPS</div>
+                    <v-list-item-title class="text-h5 mb-1">
+                      Virtual private servers
+                    </v-list-item-title>
+                    <v-list-item-subtitle
+                      >Create a VPS in minutes. <br />Starting @ 0.005$ per hour
+                    </v-list-item-subtitle>
+                  </v-list-item-content>
+
+                  <v-list-item-avatar tile size="80" color="grey">
+                    <img src="/dc.jpg" alt="Datacenter @ VPS"
+                  /></v-list-item-avatar>
+                </v-list-item>
+
+                <v-card-actions>
+                  <v-btn outlined rounded text>Instances</v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-flex>
+            <v-flex>
+              <v-card class="mx-auto" max-width="500" min-width="350" >
+                <v-list-item three-line>
+                  <v-list-item-content>
+                    <div class="text-overline mb-4">Node</div>
+                    <v-list-item-title class="text-h5 mb-1">
+                      Become a Node
+                    </v-list-item-title>
+                    <v-list-item-subtitle
+                      >Earn cryptocurrency by lending your server</v-list-item-subtitle
+                    >
+                  </v-list-item-content>
+
+                  <v-list-item-avatar
+                    tile
+                    size="80"
+                    color="grey"
+                  ></v-list-item-avatar>
+                </v-list-item>
+
+                <v-card-actions>
+                  <v-btn outlined rounded text> Button </v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-flex>
+          </v-layout>
+        </v-container>
+
         <v-container fluid>
           <v-row class="">
             <v-card-text>
@@ -44,8 +87,9 @@
             </v-card-text>
             <v-card-text class="pa-md-4">
               Starting a virtual machine is very fast and it will be delivered
-              within minutes if there are enough nodes available.
-              For the moment there is only one type of instance, the C1 instances : 1vcpus, 2048mb of ram,  10gb storage, ubuntu jammy for 0.005 $ an hour
+              within minutes if there are enough nodes available. For the moment
+              there is only one type of instance, the C1 instances : 1vcpus,
+              2048mb of ram, 10gb storage, ubuntu jammy for 0.005 $ an hour
             </v-card-text>
 
             <v-card-text>
@@ -66,8 +110,9 @@
               to one of our subadress that is asign to you (you can collect it
               in your profile section). If you send monero, we will see that
               there is a new transaction and that will allow us to fill your
-              account.<br>
-              We would like, later, to add many others crypto currencies such as solana, bitcoin, ethereum.
+              account.<br />
+              We would like, later, to add many others crypto currencies such as
+              solana, bitcoin, ethereum.
               <br />
               We take a 30% commission between the node and the users.
             </v-card-text>
@@ -86,9 +131,9 @@
               The user interface is open source on
               <a href="https://github.com/Parmicciano/remote-python-webv"
                 >github</a
-              >, feel free to improve it.
-
-              All the actions you perform in the interface are available to be used directly with your api key @ api.masternetwork.dev
+              >, feel free to improve it. All the actions you perform in the
+              interface are available to be used directly with your api key @
+              api.masternetwork.dev
               <br />
             </v-card-text>
             <v-card-text class="pa-md-4"> </v-card-text>
