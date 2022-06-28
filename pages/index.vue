@@ -164,7 +164,7 @@
       v-for="mountain of mountains"
       :key="mountain.Workers"
     >
-      Number of current users : {{ mountain.users * 2 }} <br /><br />
+      Number of current users : {{ mountain.users * 3 }} <br /><br />
     </v-text>
   </div>
 </template>
