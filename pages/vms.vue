@@ -53,8 +53,10 @@
           <br />
           password: {{ mountain.password }} <br />
           Order executed:
-          <span v-if="mountain.OrderFilled == 'true'">Yes</span>
-          <span v-else>Not yet</span> <br />
+
+          <span v-if="mountain.OrderFilled == false">Not yet</span>
+          <span v-else>Yes</span>
+          <br />
         </v-card-text>
         <v-card-actions>
           <v-row justify="space-around">
@@ -154,7 +156,7 @@
               name: {{ port.portname }} <br />
               type: {{ port.type }}<br />
               localport: {{ port.localport }} <br />
-              ip: 13.38.37.80 <br>
+              ip: 13.38.37.80 <br />
               <span v-if="port.remoteport != null"
                 >remote port: {{ port.remoteport }}</span
               >
@@ -198,7 +200,7 @@
         required
       ></v-text-field>
 
-      <v-btn color="success" class="mr-4" @click="SEND" > Validate </v-btn>
+      <v-btn color="success" class="mr-4" @click="SEND"> Validate </v-btn>
     </v-form>
   </div>
 </template>
@@ -239,7 +241,7 @@ export default {
           "/" +
           this.$fire.auth.currentUser.uid
       );
-      this.$nuxt.refresh()
+      this.$nuxt.refresh();
     },
     validate(key) {
       const axios = require("axios");
@@ -254,7 +256,7 @@ export default {
           "/" +
           key
       );
-      this.$nuxt.refresh()
+      this.$nuxt.refresh();
     },
     deleteVM(key) {
       if (
@@ -264,10 +266,10 @@ export default {
       ) {
         const axios = require("axios");
         axios.get("https://api.masternetwork.dev/deletevm/" + key);
-        this.$nuxt.refresh()
+        this.$nuxt.refresh();
       }
     },
-      deleteport(doc) {
+    deleteport(doc) {
       if (
         confirm(
           "This action isn't recoverable. Are you sure you want to delete ?"
@@ -275,18 +277,18 @@ export default {
       ) {
         const axios = require("axios");
         axios.get("https://api.masternetwork.dev/deleteport/" + doc);
-        this.$nuxt.refresh()
+        this.$nuxt.refresh();
       }
     },
     startVM(key) {
       const axios = require("axios");
       axios.get("https://api.masternetwork.dev/startvm/" + key);
-      this.$nuxt.refresh()
+      this.$nuxt.refresh();
     },
     stopVM(key) {
       const axios = require("axios");
       axios.get("https://api.masternetwork.dev/stopvm/" + key);
-      this.$nuxt.refresh()
+      this.$nuxt.refresh();
     },
   },
 
