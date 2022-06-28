@@ -198,7 +198,7 @@
         required
       ></v-text-field>
 
-      <v-btn color="success" class="mr-4" @click="SEND"> Validate </v-btn>
+      <v-btn color="success" class="mr-4" @click="SEND" > Validate </v-btn>
     </v-form>
   </div>
 </template>
@@ -239,6 +239,7 @@ export default {
           "/" +
           this.$fire.auth.currentUser.uid
       );
+      this.$nuxt.refresh()
     },
     validate(key) {
       const axios = require("axios");
@@ -253,6 +254,7 @@ export default {
           "/" +
           key
       );
+      this.$nuxt.refresh()
     },
     deleteVM(key) {
       if (
@@ -273,15 +275,18 @@ export default {
       ) {
         const axios = require("axios");
         axios.get("https://api.masternetwork.dev/deleteport/" + doc);
+        this.$nuxt.refresh()
       }
     },
     startVM(key) {
       const axios = require("axios");
       axios.get("https://api.masternetwork.dev/startvm/" + key);
+      this.$nuxt.refresh()
     },
     stopVM(key) {
       const axios = require("axios");
       axios.get("https://api.masternetwork.dev/stopvm/" + key);
+      this.$nuxt.refresh()
     },
   },
 
