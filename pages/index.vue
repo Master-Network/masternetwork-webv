@@ -89,7 +89,7 @@
               Starting a virtual machine is very fast and it will be delivered
               within minutes if there are enough nodes available. For the moment
               there is only one type of instance, the C1 instances : 1vcpus,
-              2048mb of ram, 10gb storage, ubuntu jammy for 0.005 $ an hour
+              2048mb of ram, 20gb storage, ubuntu jammy for 0.005 $ an hour
             </v-card-text>
 
             <v-card-text>

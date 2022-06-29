@@ -114,7 +114,7 @@ export default {
           name: "C1",
           vcpus: 1,
           ram: 2048,
-          storage: 10,
+          storage: 20,
           os: "ubuntu 22.04",
           price: "0.005",
         },
