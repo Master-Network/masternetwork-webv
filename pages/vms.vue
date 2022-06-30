@@ -241,6 +241,7 @@ export default {
           "/" +
           this.$fire.auth.currentUser.uid
       );
+      await sleep(1000)
       this.$nuxt.refresh();
     },
     validate(key) {
