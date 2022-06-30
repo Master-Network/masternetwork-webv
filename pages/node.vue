@@ -25,10 +25,12 @@
           reliability (it should be very rare that a user is unable to connect
           to his instance).
           <br><br>
+          Don't worry about a virtual machine doing anything on your network, we have designed a vpn to protect the network nodes.
+          <br><br>
           For now, your hardware must be based on ubuntu or debian, and will require sudo rights to run. Indeed, the program installs dependencies during its operation allowing the administration of virtual machines.
           <br><br>
           You can, in a few minutes, start a node by following our <a href="https://docs.masternetwork.dev/installation">guide</a>. On demand, virtual machines will be broken up and from that moment on you will start earning cryptocurrency. 
-          You can choose what you allocate in terms of resources (vcpus, ram, storage.
+          You can choose what you allocate in terms of resources (vcpus, ram, storage).
         </p>
       </v-main>
     </v-app>

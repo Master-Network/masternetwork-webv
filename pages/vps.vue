@@ -116,7 +116,7 @@ export default {
           ram: 2048,
           storage: 20,
           os: "ubuntu 22.04",
-          price: "0.005",
+          price: "0.0075",
         },
       ],
     };

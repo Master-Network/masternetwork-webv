@@ -165,6 +165,7 @@
       :key="mountain.Workers"
     >
       Number of current users : {{ mountain.users * 3 }} <br /><br />
+      Number of current masternodes : {{ mountain.Workers * 3 }} <br /><br />
     </v-text>
   </div>
 </template>

@@ -229,7 +229,7 @@ export default {
   }),
 
   methods: {
-    SEND() {
+    async SEND() {
       const axios = require("axios");
       console.log(this.$fire.auth.currentUser.uid);
       console.log(this.name);
