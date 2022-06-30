@@ -2005,7 +2005,7 @@
 
 "@nuxtjs/google-analytics@^2.4.0":
   version "2.4.0"
-  resolved "https://registry.npmjs.org/@nuxtjs/google-analytics/-/google-analytics-2.4.0.tgz"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/google-analytics/-/google-analytics-2.4.0.tgz#3bb9f398a05cc23340d1f423f8d8653dc4114f46"
   integrity sha512-rDQTwHIjyjVrx8GywHPuWykJ3jRFGaHl5Iqji/y8tQWUc0yGEeHxOoR0yimzxnTS1Ph2/PubQYpgnVeEPEdL/A==
   dependencies:
     vue-analytics "^5.22.1"

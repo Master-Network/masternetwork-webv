@@ -80,7 +80,11 @@
               pi, you can make it available to the platform.<br />
               Thus, depending on the demand, your server will be able to run
               virtual machines for others and you will receive cryptocurrencies
-              according to the computing power used
+              according to the computing power used. My personal estimation is
+              that the masternetwork belongs to web 2.8. <br /><br />
+              The masternetwork is indeed partly decentralized since an api is
+              needed to relay between the users (the developers) and the nodes
+              which are the providers of this cloud.
             </v-card-text>
             <v-card-text>
               <h2>How to start a virtual machine ?</h2>
@@ -209,9 +213,9 @@ export default {
     INSTANCE() {
       this.$router.push("/vps");
     },
-     NODE() {
+    NODE() {
       this.$router.push("/node");
-    }
+    },
   },
 };
 </script>
