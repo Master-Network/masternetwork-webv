@@ -83,22 +83,11 @@
               pressed
               color="error"
               v-on:click="deleteVM(mountain.key)"
-              v-if="mountain.Statewanted != -69"
-              depressed
-              disabled
             >
               Delete
               <v-icon dark right> mdi-delete </v-icon>
             </v-btn>
-            <v-btn
-              pressed
-              color="error"
-              v-on:click="deleteVM(mountain.key)"
-              v-else
-            >
-              Delete
-              <v-icon dark right> mdi-delete </v-icon>
-            </v-btn> </v-row
+         </v-row
           ><br /><br />
         </v-card-actions>
         <v-card-text v-if="detail == true">
