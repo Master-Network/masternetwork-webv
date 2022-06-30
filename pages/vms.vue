@@ -85,8 +85,17 @@
               v-on:click="deleteVM(mountain.key)"
             >
               Delete
+              <v-icon dark right> mdi-alert </v-icon>
+            </v-btn>
+                      <v-btn
+              pressed
+              color="yellow"
+              v-on:click="reportVM(mountain.key)"
+            >
+              Delete
               <v-icon dark right> mdi-delete </v-icon>
             </v-btn>
+            
          </v-row
           ><br /><br />
         </v-card-actions>
@@ -260,6 +269,18 @@ export default {
         this.$nuxt.refresh();
       }
     },
+        reportVM(key) {
+      if (
+        confirm(
+          "Are you sure you want to report? This action will have consequences !"
+        )
+      ) {
+        const axios = require("axios");
+        axios.get("https://api.masternetwork.dev/reportnode/" + key);
+        this.$nuxt.refresh();
+      }
+    },
+    
     deleteport(doc) {
       if (
         confirm(
