@@ -7,7 +7,7 @@
           <v-card-text>
             <div v-for="u of udata" :key="u.uid">
               Monero balance : {{ u.xmr_balance }} xmr <br /><br />
-              Send your monero to this subadress to fill your portfolio.<br><br>
+              Send your monero to this subaddress to fill your portfolio.<br><br>
               address : {{ u.xmr_subadress }} <br /><br />
               <figure class="qrcode">
                 <qr-code :text="u.xmr_subadress" error-level="H"></qr-code>
