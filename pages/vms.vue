@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>Be careful ! If your balance is null and you have a vm running, it will be stopped and quickly delete</p>
+    <p>Be careful ! If your balance is null and you have a vm running, it will be stopped and quickly deleted</p>
     <p v-if="$fetchState.pending">Loading....</p>
     <p v-else-if="$fetchState.error">Error while fetching vms</p>
 

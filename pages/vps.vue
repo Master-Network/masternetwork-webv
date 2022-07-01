@@ -52,7 +52,7 @@
         <br><br>
         <span>
           Unfortunately, these instances don't work exactly like the ones you
-          could use at aws or google cloud. Indeed, the instances are hosted on
+          could use at AWS or Google Cloud. Indeed, the instances are hosted on
           servers belonging to individuals (homelab). This allows to provide
           lower prices and to exploit computing power usually not used. However,
           the instances are protected behind a firewall, so if you want to

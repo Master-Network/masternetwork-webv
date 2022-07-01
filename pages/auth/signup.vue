@@ -54,12 +54,12 @@ export default {
     name: "",
     nameRules: [
       (v) => !!v || "Name is required",
-      (v) => (v && v.length <= 30) || "Name must be less than 10 characters",
+      (v) => (v && v.length <= 30) || "Name must be less than 10 characters long",
     ],
     password: "",
     passwordRules: [
       (v) => !!v || "Password is required",
-      (v) => (v && v.length >= 6) || "Password must minimums 6 characters",
+      (v) => (v && v.length >= 6) || "Password must be at least 6 characters long",
     ],
     email: "",
     emailRules: [

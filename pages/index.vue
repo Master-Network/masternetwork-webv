@@ -76,7 +76,7 @@
             <v-card-text class="pa-md-4">
               The masternetwork is a platform that connects computing power with
               developers in exchange for cryptocurrency. <br />
-              If you do not use a server supporting virtualization, a rasberry
+              If you do not use a server supporting virtualization, a raspberry
               pi, you can make it available to the platform.<br />
               Thus, depending on the demand, your server will be able to run
               virtual machines for others and you will receive cryptocurrencies
@@ -92,8 +92,8 @@
             <v-card-text class="pa-md-4">
               Starting a virtual machine is very fast and it will be delivered
               within minutes if there are enough nodes available. For the moment
-              there is only one type of instance, the C1 instances : 1vcpus,
-              2048mb of ram, 20gb storage, ubuntu jammy for 0.0075 $ an hour
+              there is only one type of instance, the C1 instances : 1 vCPU,
+              2048 MB of RAM, 20 GB of storage, Ubuntu Jammy for 0.0075 $ an hour
             </v-card-text>
 
             <v-card-text>
@@ -111,7 +111,7 @@
               We use monero, it's a private, decentralized cryptocurrency.
               <br />
               In order to fill your account with monero, you have to send monero
-              to one of our subadress that is asign to you (you can collect it
+              to one of our subaddress that is asign to you (you can collect it
               in your profile section). If you send monero, we will see that
               there is a new transaction and that will allow us to fill your
               account.<br />
