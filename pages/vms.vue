@@ -85,15 +85,15 @@
               v-on:click="deleteVM(mountain.key)"
             >
               Delete
-              <v-icon dark right> mdi-alert </v-icon>
+              <v-icon dark right> mdi-delete </v-icon>
             </v-btn>
                       <v-btn
               pressed
               color="yellow"
               v-on:click="reportVM(mountain.key)"
             >
-              Delete
-              <v-icon dark right> mdi-delete </v-icon>
+              Report Node 
+              <v-icon dark right> mdi-alert </v-icon>
             </v-btn>
             
          </v-row
