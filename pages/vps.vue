@@ -42,14 +42,12 @@
 
             <tr>
               <td></td>
-              <td>
-           
-              </td>
+              <td></td>
               <td colspan="4"></td>
             </tr>
           </v-data-table>
         </div>
-        <br><br>
+        <br /><br />
         <span>
           Unfortunately, these instances don't work exactly like the ones you
           could use at AWS or Google Cloud. Indeed, the instances are hosted on
@@ -59,11 +57,14 @@
           exploit a port such as 80 to expose a website, you will have to go on
           your interface and declare a domain name. By using CNAME in the dns
           records, you will be able to send your traffic directly to your
-          instance.<br><br>
-          It works the same way for other ports, like port 3306 for example (mysql). 
-          You will just have to specify the port to your database connection tool (remote port).
-          <br><br>
-          For more details about ordering a virtual private server, you can read our <a href="https://docs.masternetwork.dev/create-a-vm">documentation</a>
+          instance.<br /><br />
+          It works the same way for other ports, like port 3306 for example
+          (mysql). You will just have to specify the port to your database
+          connection tool (remote port).
+          <br /><br />
+          For more details about ordering a virtual private server, you can read
+          our
+          <a href="https://docs.masternetwork.dev/create-a-vm">documentation</a>
         </span>
       </v-main>
     </v-app>
@@ -117,6 +118,38 @@ export default {
           storage: 20,
           os: "ubuntu 22.04",
           price: "0.0075",
+        },
+        {
+          name: "C2",
+          vcpus: 2,
+          ram: 4096,
+          storage: 20,
+          os: "ubuntu 22.04",
+          price: "0.014",
+        },
+        {
+          name: "C3",
+          vcpus: 3,
+          ram: 6144,
+          storage: 25,
+          os: "ubuntu 22.04",
+          price: "0.0225",
+        },
+        {
+          name: "C4",
+          vcpus: 5,
+          ram: 10000,
+          storage: 50,
+          os: "ubuntu 22.04",
+          price: "0.0375",
+        },
+        {
+          name: "C5",
+          vcpus: 8,
+          ram: 12000,
+          storage: 75,
+          os: "ubuntu 22.04",
+          price: "0.08",
         },
       ],
     };

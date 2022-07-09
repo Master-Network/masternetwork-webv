@@ -220,7 +220,7 @@ export default {
     loader: null,
     loading: false,
     mountains: [],
-    items: ["C1"],
+    items: ["C1", "C2", "C3", "C4", "C5"],
     valid: true,
     adress: "",
     snackbar: false,
