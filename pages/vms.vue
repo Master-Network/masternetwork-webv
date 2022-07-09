@@ -155,7 +155,7 @@
               name: {{ port.portname }} <br />
               type: {{ port.type }}<br />
               localport: {{ port.localport }} <br />
-              ip: 13.38.37.80 <br />
+              ip: 13.36.202.59 <br />
               <span v-if="port.remoteport != null"
                 >remote port: {{ port.remoteport }}</span
               >
