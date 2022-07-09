@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>Be careful ! If your balance is null and you have a vm running, it will be stopped and quickly delete</p>
+    <p>Be careful ! If your balance is null and you have a vm running, it will be stopped and quickly deleted</p>
     <p v-if="$fetchState.pending">Loading....</p>
     <p v-else-if="$fetchState.error">Error while fetching vms</p>
 
@@ -85,15 +85,15 @@
               v-on:click="deleteVM(mountain.key)"
             >
               Delete
-              <v-icon dark right> mdi-alert </v-icon>
+              <v-icon dark right> mdi-delete </v-icon>
             </v-btn>
                       <v-btn
               pressed
               color="yellow"
               v-on:click="reportVM(mountain.key)"
             >
-              Delete
-              <v-icon dark right> mdi-delete </v-icon>
+              Report Node 
+              <v-icon dark right> mdi-alert </v-icon>
             </v-btn>
             
          </v-row

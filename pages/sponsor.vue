@@ -70,13 +70,13 @@ export default {
     valid: true,
     referral: "",
     nameRules: [
-      (v) => !!v || "adress is required",
-      (v) => (v && v.length > 10) || "api key must be bigger than 10 characters",
+      (v) => !!v || "api key is required",
+      (v) => (v && v.length > 10) || "api key must be more than 10 characters long",
     ],
     password: "",
     passwordRules: [
       (v) => !!v || "Password is required",
-      (v) => (v && v.length >= 6) || "Password must minimums 6 characters",
+      (v) => (v && v.length >= 6) || "Password must be at least 6 characters long",
     ],
     email: "",
     emailRules: [
