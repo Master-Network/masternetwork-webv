@@ -2,7 +2,7 @@
   <div>
     <v-app>
       <v-app-bar app>
-        Masternetwork
+        <a href="https://masternetwork.dev">Masternetwork</a>
         <v-layout justify-end>
           <v-card-actions>
             <v-btn color="success" class="mr-4" @click="REGISTER">
@@ -74,26 +74,18 @@
               <h2>What is the masternetwork ?</h2>
             </v-card-text>
             <v-card-text class="pa-md-4">
-              The masternetwork is a platform that connects computing power with
-              developers in exchange for cryptocurrency. <br />
-              If you do not use a server supporting virtualization, a raspberry
-              pi, you can make it available to the platform.<br />
-              Thus, depending on the demand, your server will be able to run
-              virtual machines for others and you will receive cryptocurrencies
-              according to the computing power used. My personal estimation is
-              that the masternetwork belongs to web 2.8. <br /><br />
-              The masternetwork is indeed partly decentralized since an api is
-              needed to relay between the users (the developers) and the nodes
-              which are the providers of this cloud.
-            </v-card-text>
-            <v-card-text>
-              <h2>How to start a virtual machine ?</h2>
-            </v-card-text>
-            <v-card-text class="pa-md-4">
-              Starting a virtual machine is very fast and it will be delivered
-              within minutes if there are enough nodes available. For the moment
-              there is only one type of instance, the C1 instances : 1 vCPU,
-              2048 MB of RAM, 20 GB of storage, Ubuntu Jammy for 0.0075 $ an hour
+              The masternetwork is a FOSS platform that allows people to give up
+              computing power for developers in exchange for cryptocurrency. The
+              portion/s of computing power given up by people are called
+              "nodes". If you choose to give up computing power on a device not
+              supporting virtualization e.g a raspberry pi, you can make the
+              whole device available to the platform. Thus, depending on demand
+              for computing power, your server/device will be able to run
+              virtual machines for others. In exchange, you will receive Monero,
+              the amount depending on the time your computing power was used and
+              how much of it. Essentially, it is a crowd-sourced,
+              semi-decentralized VPS platform that allows developers to rent a
+              VPS but without relying on a single company.
             </v-card-text>
 
             <v-card-text>
@@ -105,22 +97,44 @@
             </v-card-text>
 
             <v-card-text>
-              <h2>What is the currency ?</h2>
+              <h2>What currency do we use?</h2>
             </v-card-text>
             <v-card-text class="pa-md-4">
-              We use monero, it's a private, decentralized cryptocurrency.
-              <br />
-              In order to fill your account with monero, you have to send monero
-              to one of our subaddress that is asign to you (you can collect it
-              in your profile section). If you send monero, we will see that
-              there is a new transaction and that will allow us to fill your
-              account.<br />
-              We would like, later, to add many others crypto currencies such as
-              solana, bitcoin, ethereum.
-              <br />
-              We take a 30% commission between the node and the users.
+              We use Monero, a private, decentralized, untraceable
+              cryptocurrency. Monero uses many technologies to ensure security
+              and privacy unlike (arguably) any other cryptocurrency. To find
+              out more please visit https://www.getmonero.org/ . In order to
+              fill your account with Monero which can be used for purchasing
+              your own decentralized VPS, you have to send monero to a
+              custom-generated Monero address specific to your account. You can
+              find this in the profile section of your masternetwork account. If
+              you send Monero to this address and it goes through (5-10mins), we
+              will then credit your account with the Monero. If you are looking
+              to purchase a masternetwork VPS with a different cryptocurrency,
+              we sadly do not yet have that available however we are looking to
+              support other cryptocurrencies in the future e.g zcash, ethereum,
+              or bitcoin. We take a 30% commission between the nodes and the
+              users. Need help ? We will be happy to help you on our discord
+              found here.
             </v-card-text>
-
+            <v-card-text>
+              <h2>
+                Security: How do I know I am secure and safe while
+                donating/using computing power on the masternetwork?
+              </h2>
+            </v-card-text>
+            <v-card-text class="pa-md-4">
+              We take your privacy and security very seriously at the
+              masternetwork. We use several technologies to ensure your PII
+              (personally identifiable information) ends up in nobody's hands.
+              For this reason, we have a custom routing solution that ensures
+              the node operators IP Address is not compromised. We also have a
+              custom-developed API which due to security reasons is currently
+              closed source, however we are looking into making it open source
+              with time. With time, we are also planning on moving to Tor
+              routing on both sides to ensure that sensitive activities are not
+              leaked to the ISP, node operator, or anybody else.
+            </v-card-text>
             <v-card-text>
               <h2>Need help ?</h2>
             </v-card-text>
@@ -132,15 +146,14 @@
               <h2>And ...</h2>
             </v-card-text>
             <v-card-text class="pa-md-4">
-              The user interface is open source on
+              The UI is completely FOSS on
               <a href="https://github.com/Parmicciano/remote-python-webv"
                 >github</a
-              >, feel free to improve it. All the actions you perform in the
-              interface are available to be used directly with your api key @
-              api.masternetwork.dev
+              >; feel free to improve it. All the actions you perform in the
+              interface are available to be used directly with your api key.
+              found @ api.masternetwork.dev
               <br />
             </v-card-text>
-            <v-card-text class="pa-md-4"> </v-card-text>
           </v-row>
           <!-- If using vue-router -->
           <router-view></router-view>

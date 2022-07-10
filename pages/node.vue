@@ -2,7 +2,7 @@
   <div>
     <v-app>
       <v-app-bar app>
-        Masternetwork
+         <a href="https://masternetwork.dev">Masternetwork</a>
         <v-layout justify-end>
           <v-card-actions>
             <v-btn color="success" class="mr-4" @click="REGISTER">
