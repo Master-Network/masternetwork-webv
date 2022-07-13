@@ -1,6 +1,9 @@
 <template>
   <div>
-    <p>Be careful ! If your balance is null and you have a vm running, it will be stopped and quickly deleted</p>
+    <p>
+      Be careful ! If your balance is null and you have a vm running, it will be
+      stopped and quickly deleted
+    </p>
     <p v-if="$fetchState.pending">Loading....</p>
     <p v-else-if="$fetchState.error">Error while fetching vms</p>
 
@@ -79,24 +82,14 @@
               Configuration
               <v-icon dark right> mdi-cog-outline </v-icon>
             </v-btn>
-            <v-btn
-              pressed
-              color="error"
-              v-on:click="deleteVM(mountain.key)"
-            >
+            <v-btn pressed color="error" v-on:click="deleteVM(mountain.key)">
               Delete
               <v-icon dark right> mdi-delete </v-icon>
             </v-btn>
-                      <v-btn
-              pressed
-              color="yellow"
-              v-on:click="reportVM(mountain.key)"
-            >
-              Report Node 
+            <v-btn pressed color="yellow" v-on:click="reportVM(mountain.key)">
+              Report Node
               <v-icon dark right> mdi-alert </v-icon>
-            </v-btn>
-            
-         </v-row
+            </v-btn> </v-row
           ><br /><br />
         </v-card-actions>
         <v-card-text v-if="detail == true">
@@ -109,7 +102,7 @@
             <v-icon dark right> mdi-pen-plus </v-icon>
           </v-btn>
           <v-btn pressed color="primary" v-else v-on:click="Editing = false">
-            <v-icon dark right> mdi-pen-plus </v-icon>
+            <v-icon dark right> mdi-pen-plus</v-icon>
           </v-btn>
 
           <div v-if="Editing == true">
@@ -121,6 +114,14 @@
                 required
               ></v-text-field>
 
+              <v-select
+                v-model="type"
+                :items="Types"
+                :rules="[(v) => !!v || 'Type is required']"
+                label="Type"
+                required
+              ></v-select>
+         
               <v-text-field
                 v-model="localport"
                 :counter="5"
@@ -129,14 +130,22 @@
                 required
               ></v-text-field>
 
-              <v-select
-                v-model="type"
-                :items="Types"
-                :rules="[(v) => !!v || 'Type is required']"
-                label="Type"
-                required
-              ></v-select>
 
+              <v-text-field
+              v-if="type == 'customdomainssl'"
+                v-model="crtpath"
+                :counter="80"
+                label="CRT path"
+                required
+              ></v-text-field>
+
+              <v-text-field
+              v-if="type == 'customdomainssl'"
+                v-model="keypath"
+                :counter="80"
+                label="Keypath"
+                required
+              ></v-text-field>
               <v-btn
                 :disabled="!valid"
                 color="success"
@@ -154,7 +163,10 @@
 
               name: {{ port.portname }} <br />
               type: {{ port.type }}<br />
-              localport: {{ port.localport }} <br />
+
+              <span v-if="port.localport != null"
+                >localport port: {{ port.remoteplocalportort }}</span
+              >
               ip: 13.36.202.59 <br />
               <span v-if="port.remoteport != null"
                 >remote port: {{ port.remoteport }}</span
@@ -212,7 +224,7 @@ export default {
     ...mapState(["user"]),
   },
   data: () => ({
-    Types: ["tcp", "customdomain"],
+    Types: ["tcp", "customdomainssl"],
 
     Editing: false,
     detail: false,
@@ -240,13 +252,14 @@ export default {
           "/" +
           this.$fire.auth.currentUser.uid
       );
-      this.$router.push("/index");
-      await sleep(1000)
+      this.$router.push("/");
+      await sleep(1000);
       this.$nuxt.refresh();
     },
     validate(key) {
       const axios = require("axios");
       //{name}/{localport}/{type}/{key}/
+      
       axios.get(
         "https://api.masternetwork.dev/newport/" +
           this.name +
@@ -255,7 +268,12 @@ export default {
           "/" +
           this.type +
           "/" +
-          key
+          key + 
+          "/{CRTPATH}/{KEYPATH}?crtpath=" +
+          this.crtpath +
+          "&keypath="+
+          this.keypath
+
       );
       this.$nuxt.refresh();
     },
@@ -270,7 +288,7 @@ export default {
         this.$nuxt.refresh();
       }
     },
-        reportVM(key) {
+    reportVM(key) {
       if (
         confirm(
           "Are you sure you want to report? This action will have consequences !"
@@ -281,7 +299,7 @@ export default {
         this.$nuxt.refresh();
       }
     },
-    
+
     deleteport(doc) {
       if (
         confirm(
