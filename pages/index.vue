@@ -118,7 +118,12 @@
             </v-card-text>
             <v-card-text class="pa-md-4">
               It's easy to setup, please check our
-              <a href="https://docs.masternetwork.dev">documentation</a>
+              <a href="https://docs.masternetwork.dev">documentation</a>.
+              The client that serves as a program to get a node up and running is open source. You can check that it is not a malware that would degrade the performance of your machine for some reason. A masternode when as we could call it, is part of the system, it is launched a bit like torrents.
+A masternode is thus to allocate the resources of your machine to the system and thus to make profit with the other users of your machine against cryptocurrencies, it is the principle! 
+In theory, it's a bit like if you own an aws datacenter and you rent it to individuals in the form of virtual machine, storage services, web hosting, apis, cloud function and much more (in development)
+
+
             </v-card-text>
 
             <v-card-text>
