@@ -193,6 +193,14 @@ You do have to meet quality standards to be a masternode, but don't worry, we wi
               in a few seconds, in complete safety! Above all, do not hesitate
               to encrypt the documents that require it.
             </v-card-text>
+                        <v-card-text>
+              <h2>Is the Masternetwork decentralized?</h2>
+            </v-card-text>
+            <v-card-text class="pa-md-4">
+        The Masternetwork, one could say, is decentralized. Why is it so? Well, in theory, all virtual machines are provisioned on nodes and therefore decentralized. However, it's impossible to make it totally decentralized since we use a reverse proxy (to give ports to servers that don't have a public ip) and we also use a vpn to protect the nodes (and their network!) Finally, the api is not decentralized since it connects suppliers and customers, allowing to ensure that the transaction takes place and allowing a customer service. So I would say that the masternetwork belongs to web 2.8
+
+
+            </v-card-text>
             <v-card-text>
               <h2>Need help ?</h2>
             </v-card-text>
