@@ -85,7 +85,7 @@
               the amount depending on the time your computing power was used and
               how much of it. Essentially, it is a crowd-sourced,
               semi-decentralized VPS platform that allows developers to rent a
-              VPS but without relying on a single company. <br>It is a cloud
+              VPS but without relying on a single company. <br />It is a cloud
               allowing above all the connection of suppliers of servers,
               machines and storage with operators / developers. Eventually, we
               want to make our machine services very efficient, with a billing
@@ -158,7 +158,33 @@
               closed source, however we are looking into making it open source
               with time. With time, we are also planning on moving to Tor
               routing on both sides to ensure that sensitive activities are not
-              leaked to the ISP, node operator, or anybody else.
+              leaked to the ISP, node operator, or anybody else. As far as
+              security is concerned, the masternetwork does its best to ensure
+              the security of both nodes and users rather than adding features.
+              Virtual machines are about to be encrypted (in development) which
+              will eventually make virtual machines impossible to exploit for
+              malicious nodes, and so much the better! Finally, if you ever find
+              potential security holes, we will be very happy if you let us know
+              directly on github or discord. If you can create a patch directly
+              and send it to github. Of course, we will check it but it will
+              allow us to focus on adding functionality.Virtual machines are
+              secured by a username and password but you are free to make a
+              custom configuration by putting a ssh key or even disable all
+              possible ways of connection (if you are mentally insane aka cool
+              people). Open only the ports you need to expose on the internet.
+              If you open ports you don't need, it increases the risk of getting
+              hacked. It is therefore necessary to open the ports sparingly!
+              Also, be careful what you install on your virtual machines. Some
+              of the processes running on virtual machines could be viruses that
+              would use your computing power to mine crypto currencies, steal
+              your data... If you have any doubt, do not hesitate to delete your
+              virtual machines and to recreate them since it is made for that.
+              On the masternetwork, it costs you absolutely no more to delete
+              and recreate a virtual machine. Let's say your service is an API
+              for your sites. You can then write a shell / bash script to
+              automate the installation, which allows you to launch your service
+              in a few seconds, in complete safety! Above all, do not hesitate
+              to encrypt the documents that require it.
             </v-card-text>
             <v-card-text>
               <h2>Need help ?</h2>
