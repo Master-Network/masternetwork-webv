@@ -7,15 +7,15 @@
     <p v-if="$fetchState.pending">Loading....</p>
     <p v-else-if="$fetchState.error">Error while fetching vms</p>
 
-    <div v-for="(mountain, index) in mountains" :key="index">
-      <v-card elevation="2" v-if="mountain.Statewanted != -42">
+    <div v-for="(mountain, index) in mountains" :key="index" v-if="mountain.Statewanted != -42">
+      <v-card elevation="2">
         <v-card-title>
           {{ mountain.name }}
           <v-row justify="end">
             <v-card-actions>
               <v-btn
                 class="ma-2"
-                color="primary"
+                color="green darken-2"
                 dark
                 v-on:click="startVM(mountain.key)"
                 :loading="loading && index == i"
@@ -27,6 +27,12 @@
                 Start
                 <v-icon dark right> mdi-checkbox-marked-circle </v-icon>
               </v-btn>
+
+              <v-btn pressed color="" v-on:click="reportVM(mountain.key)">
+                Report Node
+                <v-icon dark right> mdi-alert </v-icon>
+              </v-btn>
+
               <v-btn
                 class="ma-2"
                 color="red"
@@ -41,6 +47,10 @@
                 Stop
                 <v-icon dark right> mdi-cancel </v-icon>
               </v-btn>
+                 <v-btn pressed color="error" v-on:click="deleteVM(mountain.key)">
+              Delete
+              <v-icon dark right> mdi-delete </v-icon>
+            </v-btn>
             </v-card-actions>
           </v-row>
         </v-card-title>
@@ -82,14 +92,7 @@
               Configuration
               <v-icon dark right> mdi-cog-outline </v-icon>
             </v-btn>
-            <v-btn pressed color="error" v-on:click="deleteVM(mountain.key)">
-              Delete
-              <v-icon dark right> mdi-delete </v-icon>
-            </v-btn>
-            <v-btn pressed color="yellow" v-on:click="reportVM(mountain.key)">
-              Report Node
-              <v-icon dark right> mdi-alert </v-icon>
-            </v-btn> </v-row
+          </v-row
           ><br /><br />
         </v-card-actions>
         <v-card-text v-if="detail == true">
@@ -121,7 +124,7 @@
                 label="Type"
                 required
               ></v-select>
-         
+
               <v-text-field
                 v-model="localport"
                 :counter="5"
@@ -130,9 +133,8 @@
                 required
               ></v-text-field>
 
-
               <v-text-field
-              v-if="type == 'customdomainssl'"
+                v-if="type == 'customdomainssl'"
                 v-model="crtpath"
                 :counter="80"
                 label="CRT path"
@@ -140,7 +142,7 @@
               ></v-text-field>
 
               <v-text-field
-              v-if="type == 'customdomainssl'"
+                v-if="type == 'customdomainssl'"
                 v-model="keypath"
                 :counter="80"
                 label="Keypath"
@@ -259,7 +261,7 @@ export default {
     validate(key) {
       const axios = require("axios");
       //{name}/{localport}/{type}/{key}/
-      
+
       axios.get(
         "https://api.masternetwork.dev/newport/" +
           this.name +
@@ -268,12 +270,11 @@ export default {
           "/" +
           this.type +
           "/" +
-          key + 
+          key +
           "/{CRTPATH}/{KEYPATH}?crtpath=" +
           this.crtpath +
-          "&keypath="+
+          "&keypath=" +
           this.keypath
-
       );
       this.$nuxt.refresh();
     },
