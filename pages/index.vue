@@ -122,9 +122,11 @@
               The client that serves as a program to get a node up and running is open source. You can check that it is not a malware that would degrade the performance of your machine for some reason. A masternode when as we could call it, is part of the system, it is launched a bit like torrents.
 A masternode is thus to allocate the resources of your machine to the system and thus to make profit with the other users of your machine against cryptocurrencies, it is the principle! 
 In theory, it's a bit like if you own an aws datacenter and you rent it to individuals in the form of virtual machine, storage services, web hosting, apis, cloud function and much more (in development)
-
+You do have to meet quality standards to be a masternode, but don't worry, we will set up a series of tests and adaptive billing in the future!
 
             </v-card-text>
+
+            
 
             <v-card-text>
               <h2>What currency do we use?</h2>
