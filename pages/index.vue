@@ -85,7 +85,32 @@
               the amount depending on the time your computing power was used and
               how much of it. Essentially, it is a crowd-sourced,
               semi-decentralized VPS platform that allows developers to rent a
-              VPS but without relying on a single company.
+              VPS but without relying on a single company. <br>It is a cloud
+              allowing above all the connection of suppliers of servers,
+              machines and storage with operators / developers. Eventually, we
+              want to make our machine services very efficient, with a billing
+              based on machine performance (uptimes, network connectivity,
+              resources). Also, we aim to build a very powerful CDN, based on
+              the decentralization of servers, allowing then, an extremely fast
+              access to the sites and services to consult. It would be great to
+              create an alternative to Netlify by being semi-decentralized! We
+              could then make the production of websites very fast and
+              replicating to the four corners of the world in a few seconds.
+              Moreover, since a website consumes very few resources, we can
+              easily imagine that each node of the network could host a hundred
+              websites in a few seconds and the users would not see any change
+              if the node falls since the website would already be in production
+              on hundreds of other servers! More complex this time but still
+              quite interesting, we think it would be cool to create an S3
+              server allowing users to store and retrieve content in a reliable
+              and durable way (we could also allow users to determine their
+              replication rate like 3,4 or 10, 50 or even 100 times!) Finally, I
+              would like to develop a system allowing users to create their own
+              network that they could use for themselves. The masternetwork
+              would give them an interface and an easy to use reverse proxy and
+              create, stop and all the operations one has to do with a virtual
+              machine would be simplified and done remotely. I wish you a very
+              nice stay on the masternetwork !
             </v-card-text>
 
             <v-card-text>
